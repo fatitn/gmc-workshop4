@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
+//var mongoDB = 'mongodb://127.0.0.1/database';
+//mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+
 // MongoDB URL from the docker-compose file
-const dbHost = 'mongodb+srv://user1:pass1@database';
+const dbHost = 'mongodb://user1:pass1@database';
 
 // Connect to mongodb
 mongoose.connect(dbHost);
