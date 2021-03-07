@@ -2,9 +2,9 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_OWNER = 'mdnfiras'
-        DOCKER_USER = 'mdnfiras'
-        DOCKER_TOKEN = credentials('dockerhub-firas-token')
+        DOCKER_OWNER = 'fatitn'
+        DOCKER_USER = 'fatitn'
+        DOCKER_TOKEN = credentials('fatma-dockerhub-token')
         FRONT_IMG_TAG = sh( returnStdout:true,
                     script: 'sha256sum angular-app/package.json | cut -c1-15'
                   ).trim()
